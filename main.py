@@ -31,8 +31,8 @@ merged_pdf_name= st.text_input("Name of the merged pdf file:","my_material")
 st.text("※拡張子は入力不要")
 
 #pdfのアップロード
-uploaded_file1 = (st.file_uploader("Choose your .pdf file1", type="pdf"))
-uploaded_file2 = (st.file_uploader("Choose your .pdf file2", type="pdf"))
+uploaded_file1 = (st.file_uploader("Choose your .pdf file1",accept_multiple_files=False, type="pdf"))
+uploaded_file2 = (st.file_uploader("Choose your .pdf file2",accept_multiple_files=False, type="pdf"))
 if uploaded_file1 and uploaded_file2 is not None:
     uploaded_files = [uploaded_file1, uploaded_file2]
     mes, pdf_path = merge_pdf(uploaded_files, merged_pdf_name)
