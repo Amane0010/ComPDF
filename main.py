@@ -24,7 +24,7 @@ def open_pdf(pdf_path: str, name: str):
 
 
 #タイトル
-st.title("MyApp")
+st.title("pdfを結合するアプリ")
 
 #結合後のpdfファイルの名前
 merged_pdf_name= st.text_input("Name of the merged pdf file","my_material")
