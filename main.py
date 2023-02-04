@@ -12,7 +12,7 @@ def merge_pdf (pdf_files : list, pdf_name : str) -> str:
     merger.close()
     return f"{pdf_name}.pdfを生成します", pdf_path
 
-def open_pdf(pdf_path: str, name: str):
+def open_pdf(pdf_path: str, name: str) -> None:
     with open(pdf_path, "rb") as pdf_file:
         pdf = pdf_file.read()
 
@@ -22,6 +22,7 @@ def open_pdf(pdf_path: str, name: str):
         file_name=f"{name}.pdf",
         mime='application/octet-stream',
         )
+    return 
 
 
 #タイトル
