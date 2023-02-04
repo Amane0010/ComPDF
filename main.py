@@ -8,6 +8,7 @@ def merge_pdf (pdf_files : list, pdf_name : str) -> str:
         merger.append(pdf)
 
     pdf_path = os.path.abspath(f"{pdf_name}.pdf")
+    merger.write(f"{pdf_name}.pdf")
     merger.close()
     return f"{pdf_name}.pdfを生成します", pdf_path
 
